@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Mockepon</title>
+  </head>
+  <body>
+    <section id="pet-selection">
+      <h1 class="title">Mockepon</h1>
+
+      <h2 class="subtitle">Elige a tu mascota:</h2>
+
+      <div class="mascotas">
+        <input type="radio" name="mascota" id="Hipodoge" />
+        <label class="tarjeta-mokepon" for="Hipodoge">
+          <p>Hipodoge</p>
+          <img src="/assets/mokepons_mokepon_hipodoge_attack.png" alt="" />
+        </label>
+
+        <input type="radio" name="mascota" id="Capipepo" />
+        <label class="tarjeta-mokepon" for="Capipepo">
+          <p>Capipepo</p>
+          <img src="/assets/mokepons_mokepon_capipepo_attack.png" alt="" />
+        </label>
+
+        <input type="radio" name="mascota" id="Ratigueya" />
+        <label class="tarjeta-mokepon" for="Ratigueya">
+          <p>Ratigueya</p>
+          <img src="/assets/mokepons_mokepon_ratigueya_attack.png" alt="" />
+        </label>
+
+        <input type="radio" name="mascota" id="Langostelvis" />
+        <label class="tarjeta-mokepon" for="Langostelvis">Langostelvis</label>
+
+        <input type="radio" name="mascota" id="Tucapalma" />
+        <label class="tarjeta-mokepon" for="Tucapalma">Tucapalma</label>
+
+        <input type="radio" name="mascota" id="Pydos" />
+        <label class="tarjeta-mokepon" for="Pydos">Pydos</label>
+      </div>
+      <button class="btn-select-pet" id="btn-pet-selection">Seleccionar</button>
+    </section>
+
+    <section id="pet-atack">
+      <h1 class="title">Mockepon</h1>
+      <h2 class="subtitle">Seleccionar ataque:</h2>
+      <div>
+        <button id="btn-fuego" class="btn-at">Fuego 🔥</button>
+        <button id="btn-agua" class="btn-at">Agua 💧</button>
+        <button id="btn-tierra" class="btn-at">Tierra 🌱</button>
+      </div>
+
+      <div>
+        <section id="battle-messages">
+          <p id="resultado"></p>
+        </section>
+
+        <section id="reiniciar">
+          <button id="btn-restart">Reiniciar</button>
+        </section>
+      </div>
+
+      <div>
+        <div id="ataquesJugador"></div>
+        <div id="ataquesEnemigo"></div>
+        <p>
+          Tu mascota <span id="mascotaNamePlayer"></span> tiene
+          <span id="lifes-player">3</span> vidas
+        </p>
+        <p>
+          La mascota <span id="mascotaNameEnemy"></span> del enemigo tiene
+          <span id="lifes-enemy">3</span> vidas
+        </p>
+      </div>
+    </section>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
