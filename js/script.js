@@ -118,7 +118,6 @@ function crearElemento(resultado) {
 
 function crearElementoFinal(texto) {
   let mensajes = document.getElementById("resultado");
-  let parrafo = document.createElement("p");
   let btn_fuego = document.getElementById("btn-fuego");
   let btn_agua = document.getElementById("btn-agua");
   let btn_tierra = document.getElementById("btn-tierra");
@@ -127,8 +126,7 @@ function crearElementoFinal(texto) {
   btn_fuego.disabled = true;
   btn_tierra.disabled = true;
 
-  parrafo.innerHTML = texto;
-  mensajes.appendChild(parrafo);
+  mensajes.innerHTML = texto;
 }
 
 function seleccionarMascotaJugador() {

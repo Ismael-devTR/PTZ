@@ -46,6 +46,9 @@ body {
 input {
   display: none;
 }
+input:checked + label {
+  background-color: #5da7db;
+}
 
 .btn-select-pet {
   font-family: "Poppins", sans-serif;
@@ -88,4 +91,60 @@ input {
   padding: 2em;
 
   background-color: aliceblue;
+}
+
+#battle-messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 180px;
+  margin-top: 20px;
+  background-color: #11468f;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+#btn-restart {
+  padding: 20px;
+  border: transparent;
+  color: #11468f;
+  font-family: "Poppins", sans-serif;
+  background-color: aliceblue;
+  border-radius: 20px;
+  background-color: aliceblue;
+}
+
+.ataques {
+  display: grid;
+  grid-template-columns: 100px 100px;
+  border: 1px solid aliceblue;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.ataque-jugador,
+.ataque-enemigo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (max-width: 360px) {
+  .mascotas {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  #pet-atack {
+    display: flex;
+    flex-direction: column;
+  }
+  .groupAtack {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }

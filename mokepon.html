@@ -47,33 +47,31 @@
     <section id="pet-atack">
       <h1 class="title">Mockepon</h1>
       <h2 class="subtitle">Seleccionar ataque:</h2>
-      <div>
+      <div class="groupAtack">
         <button id="btn-fuego" class="btn-at">Fuego 🔥</button>
         <button id="btn-agua" class="btn-at">Agua 💧</button>
         <button id="btn-tierra" class="btn-at">Tierra 🌱</button>
       </div>
 
-      <div>
-        <section id="battle-messages">
-          <p id="resultado"></p>
-        </section>
+      <section id="battle-messages">
+        <p id="resultado">Mucha suerte</p>
 
-        <section id="reiniciar">
+        <div id="reiniciar">
           <button id="btn-restart">Reiniciar</button>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div>
-        <div id="ataquesJugador"></div>
-        <div id="ataquesEnemigo"></div>
-        <p>
-          Tu mascota <span id="mascotaNamePlayer"></span> tiene
-          <span id="lifes-player">3</span> vidas
-        </p>
-        <p>
-          La mascota <span id="mascotaNameEnemy"></span> del enemigo tiene
-          <span id="lifes-enemy">3</span> vidas
-        </p>
+      <div class="ataques">
+        <div class="ataque-jugador">
+          <p id="mascotaNamePlayer"></p>
+          <p id="lifes-player">3</p>
+          <div id="ataquesJugador"></div>
+        </div>
+        <div class="ataque-enemigo">
+          <p id="mascotaNameEnemy"></p>
+          <p id="lifes-enemy">3</p>
+          <div id="ataquesEnemigo"></div>
+        </div>
       </div>
     </section>
 
