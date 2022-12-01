@@ -57,6 +57,8 @@ let Ratigueya = new Mokepon(
 
 Hipodoge.ataques.push(
   { nombre: "💧", id: "btn-agua" },
+  { nombre: "💧", id: "btn-agua" },
+  { nombre: "💧", id: "btn-agua" },
   { nombre: "🔥", id: "btn-fuego" },
   { nombre: "🌱", id: "btn-tierra" }
 );
@@ -116,9 +118,14 @@ function ataqueTierra() {
 }
 
 function ataqueEnemigo() {
-  let ataque = aleatorio(0, mokepones.length - 1);
-
-  ataqueEnemigoPlayer.innerHTML(mokepones[ataque].nombre);
+  let ataque = aleatorio(1, 3);
+  if (ataque == 1) {
+    ataqueEnemigoPlayer = "FUEGO";
+  } else if (ataque == 2) {
+    ataqueEnemigoPlayer = "AGUA";
+  } else if (ataque == 3) {
+    ataqueEnemigoPlayer = "TIERRA";
+  }
   combate();
 }
 
@@ -215,9 +222,9 @@ function extraerAtaques(mascotaJugador) {
   mokepones.forEach((mokepon) => {
     mascotaJugador === mokepon.nombre && (ataques = mokepon.ataques);
   });
-  console.log(ataques);
   mostrarAtaques(ataques);
 }
+
 function mostrarAtaques(ataques) {
   let ataques_moqkepones;
   ataques.forEach((ataque) => {
@@ -235,22 +242,8 @@ function mostrarAtaques(ataques) {
 }
 
 function seleccionarMascotaEnemigo() {
-  let ataqueAleatorio = aleatorio(1, 6);
-  if (ataqueAleatorio == 1) {
-    mascotaNameEnemy.innerHTML = "Hipodoge";
-  } else if (ataqueAleatorio == 2) {
-    mascotaNameEnemy.innerHTML = "Capipepo";
-  } else if (ataqueAleatorio == 3) {
-    mascotaNameEnemy.innerHTML = "Ratigueya";
-  } else if (ataqueAleatorio == 4) {
-    mascotaNameEnemy.innerHTML = "Langostelvis";
-  } else if (ataqueAleatorio == 5) {
-    mascotaNameEnemy.innerHTML = "Tucapalma";
-  } else if (ataqueAleatorio == 6) {
-    mascotaNameEnemy.innerHTML = "Pydos";
-  } else {
-    alert("Mascota no seleccionada");
-  }
+  let ataqueAleatorio = aleatorio(1, mokepones.length - 1);
+  mascotaNameEnemy.innerHTML = mokepones[ataqueAleatorio].nombre;
 }
 
 function aleatorio(min, max) {
